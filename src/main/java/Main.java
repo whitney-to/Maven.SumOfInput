@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        
+
+        //get user input
         int number = getInputNumber();
-        
+
+        // pass in user input into methods
         int sum = sumOfNumbers(number);
         
         System.out.println("sumOfNumbers method: "+sum);
@@ -45,9 +47,11 @@ public class Main {
     
     // for Extra Credit
     static int gaussianSumOfNumbers(int n) {
+
+        //if number is even
         if(n%2==0){
             return (n/2)*(n+1);
-        } else {
+        } else { // if number is odd, has to convert to double to avoid rounding error
             double temp = n;
             return (int) ((temp/2.0)*(n+1));
         }
